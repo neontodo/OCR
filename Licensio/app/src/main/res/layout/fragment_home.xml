@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.HomeFragment"
+    android:background="@drawable/drawer">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/homepageLayout"
+        android:background="@drawable/rounded_medicine_result"
+        android:alpha="0.7">
+        <TextView
+            android:id="@+id/welcomeBackTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginBottom="20dp"
+            android:drawableStart="@drawable/person_icon"
+            android:drawablePadding="15dp"
+            android:gravity="start|center_vertical"
+            android:text="@string/welcome_back"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/descriptionLayout"
+        android:layout_below="@id/homepageLayout"
+        android:layout_marginTop="150dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/homepageDescription"
+            android:text="The perfect way to\n stay organized &amp;\n informed about\n your medication\n regimen. "
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="italic|bold"
+            android:textAlignment="center"
+            android:fontFamily="@font/roboto"
+            android:lineSpacingExtra="15dp"
+            android:layout_marginStart="20dp"/>
+
+        <ImageView
+            android:id="@+id/homepageImageDescription"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@+id/homepageDescription"
+            android:src="@drawable/medicine_icon"
+            android:layout_marginTop="50dp"/>
+    </RelativeLayout>
+
+</RelativeLayout>

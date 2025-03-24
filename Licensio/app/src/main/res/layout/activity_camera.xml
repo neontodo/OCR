@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.camera.Camera"
+    android:background="@drawable/main_color">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scanTextLayout"
+        android:background="@drawable/rounded_medicine_result">
+        <TextView
+            android:id="@+id/takeaPictureTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="SCAN PRESCRIPTION"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/prescriptionImageView"
+        android:layout_width="329dp"
+        android:layout_height="400dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/rounded_white_rectangle"
+        android:layout_below="@id/scanTextLayout" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scannedImageTextView"
+        android:text="The scanned image will\n be displayed above"
+        android:layout_below="@+id/prescriptionImageView"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/takePictureButton"
+        android:layout_width="148dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button"
+        android:gravity="center"
+        android:text="Take Picture"
+        android:textSize="16sp"
+        android:layout_below="@id/scannedImageTextView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/backButtonPrescr"
+        android:layout_width="90dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginBottom="16dp"
+        android:drawableLeft="@drawable/back_icon"
+        android:text="@string/back"
+        android:background="@drawable/button"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

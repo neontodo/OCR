@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_color"
+    tools:context=".ui.fragments.SettingsFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/settingMainLayout">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:background="@drawable/rounded_profile_rectangle"
+            android:id="@+id/settingProfileLayout">
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/profileIconSettings"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/profile_icon_initials"
+            android:gravity="center"
+            android:text="IN"
+            android:textColor="@color/black"
+            android:textSize="44sp"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/username_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profileIconSettings"
+            android:text="@string/username"
+            android:textAlignment="center"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/username_settings"
+            android:id="@+id/email_settings"
+            android:text="@string/email"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:textStyle="italic"
+            android:textSize="18sp"
+            android:textColor="@color/white"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:id="@+id/editProfileButton"
+            android:layout_below="@id/email_settings"
+            android:layout_centerHorizontal="true"
+            android:text="Edit Profile"
+            android:background="@drawable/button"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="14dp"
+            android:textSize="16sp" />
+
+        <!--<RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/themeRadioGroup"
+            android:layout_below="@id/preferencesTextView"
+            android:orientation="horizontal"/>-->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_white_rectangle"
+            android:layout_below="@id/editProfileButton"
+            android:id="@+id/preferencesLayout"
+            android:layout_marginHorizontal="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/preferencesTextView"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="17dp"
+                android:layout_marginBottom="7dp"
+                android:text="Preferences"
+                android:textStyle="bold"
+                android:textSize="24sp"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/settingsLayout"
+                android:layout_below="@+id/preferencesTextView">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/changePermissionLayout">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:id="@+id/permissionsTextView"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Change Permissions"
+                        android:paddingStart="15dp"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:background="@color/white"
+                        android:drawableStart="@drawable/settings_icon"
+                        android:drawableTint="@color/black"
+                        android:drawablePadding="10dp"
+                        android:gravity="center_vertical"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sendFeedbackLayout"
+                    android:layout_below="@+id/changePermissionLayout">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:id="@+id/feedbackTextView"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:paddingStart="15dp"
+                    android:text="Send Feedback"
+                    android:textAlignment="textStart"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:drawableStart="@drawable/person_icon"
+                    android:drawableTint="@color/black"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"/>
+                </RelativeLayout>
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/aboutusTextView"
+                android:text="About Us"
+                android:layout_below="@+id/settingsLayout"
+                android:textAlignment="center"
+                android:layout_marginTop="0dp"
+                android:textSize="16sp"
+                android:layout_marginBottom="15dp"/>
+        </RelativeLayout>
+</RelativeLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:id="@+id/deleteAccButton"
+        android:layout_below="@+id/settingMainLayout"
+        android:layout_marginTop="20dp"
+        android:text="Delete Account"
+        android:textSize="17dp"
+        android:background="@drawable/button"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

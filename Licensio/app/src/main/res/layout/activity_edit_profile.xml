@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.profile.EditProfileActivity"
+    android:background="@drawable/main_color">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mainEditLayout"
+        android:background="@drawable/rounded_white_rectangle"
+        android:layout_marginTop="70dp"
+        android:layout_centerHorizontal="true"
+        android:paddingHorizontal="30dp">
+        <TextView
+            android:id="@+id/textViewSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/roboto"
+            android:text="Edit Profile"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etFullNameEditLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/textViewSignUp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etFullName"
+                android:layout_width="300dp"
+                android:layout_height="55dp"
+                android:drawableStart="@drawable/person_icon"
+                android:drawablePadding="15dp"
+                android:drawableTint="@color/black"
+                android:hint="@string/full_name"
+                android:inputType="text"
+                tools:layout_editor_absoluteX="67dp"
+                tools:layout_editor_absoluteY="166dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etEditUsernameLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/etFullNameEditLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etUsername"
+                android:layout_width="300dp"
+                android:layout_height="55dp"
+                android:drawableStart="@drawable/person_icon"
+                android:drawablePadding="15dp"
+                android:drawableTint="@color/black"
+                android:hint="@string/username"
+                android:inputType="text"
+                tools:layout_editor_absoluteX="67dp"
+                tools:layout_editor_absoluteY="166dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etEditEmailLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/etEditUsernameLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                android:layout_width="300dp"
+                android:layout_height="55dp"
+                android:drawableStart="@drawable/email_icon"
+                android:drawablePadding="15dp"
+                android:drawableTint="@color/black"
+                android:hint="@string/email"
+                android:inputType="text"
+                tools:layout_editor_absoluteX="67dp"
+                tools:layout_editor_absoluteY="166dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etEditPhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/etEditEmailLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPhoneNumber"
+                android:layout_width="300dp"
+                android:layout_height="55dp"
+                android:drawableStart="@drawable/phone_icon"
+                android:drawablePadding="15dp"
+                android:drawableTint="@color/black"
+                android:hint="Phone Number (Optional)"
+                android:inputType="text"
+                tools:layout_editor_absoluteX="67dp"
+                tools:layout_editor_absoluteY="166dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etEditCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/etEditPhoneNumber">
+
+           <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCountry"
+                android:layout_width="300dp"
+                android:layout_height="55dp"
+                android:drawablePadding="15dp"
+                android:drawableStart="@drawable/flag_icon"
+                android:drawableTint="@color/black"
+                android:hint="Country (Optional)"
+                android:inputType="text"
+                tools:layout_editor_absoluteX="67dp"
+                tools:layout_editor_absoluteY="166dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etEditCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/etEditCountry">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etCity"
+                android:layout_width="300dp"
+                android:layout_height="55dp"
+                android:drawableStart="@drawable/house_icon"
+                android:drawablePadding="15dp"
+                android:drawableTint="@color/black"
+                android:hint="City (Optional)"
+                android:inputType="text"
+                tools:layout_editor_absoluteX="67dp"
+                tools:layout_editor_absoluteY="166dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/applyButton"
+            android:layout_width="126dp"
+            android:layout_height="58dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button"
+            android:fontFamily="@font/roboto"
+            android:text="Apply"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            android:layout_below="@id/etEditCity"
+            tools:visibility="visible" />
+</RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/backButton"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button"
+        android:drawableLeft="@drawable/back_icon"
+        android:text="@string/back"
+        android:textSize="16sp" />
+
+</RelativeLayout>
